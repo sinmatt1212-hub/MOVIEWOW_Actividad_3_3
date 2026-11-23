@@ -1,0 +1,10 @@
+<div class="container py-5">
+  <div class="card bg-dark text-white border-warning p-4" *ngIf="pelicula; else sinDatos">
+    <h2 class="text-warning">{{ pelicula.titulo }}</h2>
+    <p><strong>Año:</strong> {{ pelicula.anio }}</p>
+    <p><strong>Género:</strong> {{ pelicula.genero }}</p>
+    <p><strong>Descripción:</strong> {{ pelicula.descripcion || 'Sin descripción.' }}</p>
+    <a routerLink="/movies" class="btn btn-warning align-self-start">Volver al catálogo</a>
+  </div>
+  <ng-template #sinDatos><p>{{ error || 'Cargando película...' }}</p><a routerLink="/movies" class="btn btn-outline-warning">Volver</a></ng-template>
+</div>
