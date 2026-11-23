@@ -2,6 +2,8 @@ services:
   - type: web
     name: moviewow-actividad-3-3
     runtime: node
+    plan: free
+    rootDir: MOVIEWOW_Actividad_3_3
     buildCommand: npm install && npm run build
     startCommand: npm start
     envVars:
